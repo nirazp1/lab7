@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Page</title>
+<script src="myscript.js"></script>
+</head>
+<body>
+<h1 style="color: blue;">Welcome to my cool page!</h1>
+<button id="my-button" style="background-color: green; color: white;">Click me now!</button>
+<script>
+function myFunction() {
+console.log("Whoa, you clicked the button!");
+}
+
+var myButton = document.getElementById("my-button");
+myButton.addEventListener("click", myFunction);
+
+function findLargestNumber(numbers) {
+var largest = numbers[0];
+for (var i = 1; i < numbers.length; i++) {
+if (numbers[i] > largest) {
+largest = numbers[i];
+}
+}
+return largest;
+}
+
+var myNumbers = [10, 22, 8, 12, 16];
+var largestNumber = findLargestNumber(myNumbers);
+console.log("The largest number in the array is: " + largestNumber);
+
+var request = new XMLHttpRequest();
+request.open("GET", "https://api.coindesk.com/v1/bpi/currentprice.json");
+request.onload = function() {
+if (request.status === 200) {
+var data = JSON.parse(request.responseText);
+console.log("The current price of Bitcoin is: " + data.bpi.USD.rate);
+} else {
+console.log("Error: " + request.statusText);
+}
+};
+request.send();
+</script>
+</body>
+</html>
