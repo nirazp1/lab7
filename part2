@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bootstrap Example</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    body {
+        font-family: 'Times New Roman', serif;
+    }
+</style>
+<script src="https://kit.fontawesome.com/af7a5a3d3f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+<h1 class="display-4">Welcome to my page!</h1>
+<p class="lead">This is a simple example of using Bootstrap styles.</p>
+<hr class="my-4">
+<p>Here are some Font Awesome icons:</p>
+<i class="fas fa-globe" style="font-size: 48px; color: #007bff;"></i>
+<i class="fas fa-pencil-alt" style="font-size: 48px; color: #28a745;"></i>
+<i class="fas fa-rocket" style="font-size: 48px; color: #dc3545;"></i>
+</div>
+</body>
+</html>
